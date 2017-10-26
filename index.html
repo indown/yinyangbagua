@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .huaji{
+        position: relative;
+        margin: 0 auto;
+        width: 786px;
+        height:786px;
+        background: url(./img/huaji.png) no-repeat;
+    }
+    .yin-yang {
+        width: 84px;
+        height: 42px;
+        background: pink;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px 2px 45px 2px;
+        border-radius: 100%;
+        position: absolute;
+        top: 174px;
+    }
+    .yin-yang:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #fff;
+        border: 15px solid black;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+    }
+    .yin-yang:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: black;
+        border: 15px solid pink;
+        border-radius:100%;
+        width: 12px;
+        height: 12px;
+    }
+    .left{
+        left: 58px;
+    }
+    .right{
+        right:220px;
+    }
+    </style>
+</head>
+<body>
+    <div class="huaji">
+        <div class="yin-yang left"></div>
+        <div class="yin-yang right"></div>
+    </div>
+</body>
+</html>
