@@ -8,10 +8,21 @@
     <style>
     .huaji{
         position: relative;
-        margin: 0 auto;
+        margin: 100px auto;
         width: 786px;
         height:786px;
         background: url(./img/huaji.png) no-repeat;
+        transition: All 0.4s ease-in-out;
+        -webkit-transition: All 0.4s ease-in-out;
+        -moz-transition: All 0.4s ease-in-out;
+        -o-transition: All 0.4s ease-in-out;
+    }
+    .huaji:hover{
+        transform: rotate(360deg) scale(1.2);
+        -webkit-transform: rotate(360deg) scale(1.2);
+        -moz-transform: rotate(360deg) scale(1.2);
+        -o-transform: rotate(360deg) scale(1.2);
+        -ms-transform: rotate(360deg) scale(1.2);
     }
     .yin-yang {
         width: 84px;
@@ -23,6 +34,7 @@
         border-radius: 100%;
         position: absolute;
         top: 174px;
+        -webkit-animation:circle 1s infinite linear;
     }
     .yin-yang:before {
         content: "";
@@ -52,12 +64,36 @@
     .right{
         right:220px;
     }
+    #xuejia{
+        display: none;
+        position: absolute;
+        top: 550px;
+        right: 480px;
+        width: 400px;
+        height: 145px;
+        background: url(./img/xuejia.png);
+    }
+    @-webkit-keyframes circle{
+        0%{ transform:rotate(0deg); }
+        100%{ transform:rotate(-360deg); }
+    }
     </style>
 </head>
 <body>
-    <div class="huaji">
+    <div class="huaji" id="huaji">
         <div class="yin-yang left"></div>
         <div class="yin-yang right"></div>
+        <div id="xuejia"></div>
     </div>
+    <script>
+        alert("移入给滑稽大佬递烟！")
+        var hj = document.getElementById("huaji");
+        hj.onmouseover=function(){
+            xuejia.style.display="block";
+        }
+        hj.onmouseout=function(){
+            xuejia.style.display="none";
+        }
+    </script>
 </body>
 </html>
